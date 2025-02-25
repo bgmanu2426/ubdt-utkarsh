@@ -17,9 +17,9 @@ import {
   Download,
 } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/src/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/src/components/ui/card"
+import { Sheet, SheetContent, SheetTrigger } from "@/src/components/ui/sheet"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -41,30 +41,33 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   function calculateTimeLeft() {
-    const difference = +new Date("2024-03-15") - +new Date()
-    let timeLeft = {}
-
+    const difference = +new Date("2025-03-15") - +new Date()
     if (difference > 0) {
-      timeLeft = {
+      return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       }
+    } else {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 }
     }
-
-    return timeLeft
   }
 
   useEffect(() => {
+    setMounted(true)
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft())
     }, 1000)
-
     return () => clearInterval(timer)
   }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -86,10 +89,6 @@ export default function Home() {
             <Link href="#timeline" className="hover:text-primary transition-colors">
               Timeline
             </Link>
-            <Link href="#about" className="hover:text-primary transition-colors">
-              About
-            </Link>
-            <Button>Register Now</Button>
           </nav>
 
           {/* Mobile Navigation */}
@@ -108,10 +107,6 @@ export default function Home() {
                 <Link href="#timeline" className="text-lg">
                   Timeline
                 </Link>
-                <Link href="#about" className="text-lg">
-                  About
-                </Link>
-                <Button className="mt-4">Register Now</Button>
               </nav>
             </SheetContent>
           </Sheet>
@@ -143,7 +138,7 @@ export default function Home() {
 
             {/* Countdown Timer */}
             <div className="mb-12 mt-8">
-              <h2 className="text-white mb-6 text-xl">Event Starts In:</h2>
+              <h2 className="text-white mb-6 text-xl">Registaration Ends In:</h2>
               <div className="flex justify-center gap-6">
                 {Object.keys(timeLeft).map((interval) => (
                   <div
@@ -212,7 +207,11 @@ export default function Home() {
                     </div>
                   </CardContent>
                   <CardFooter>
-                    <Button className="w-full transition-transform hover:scale-105">Register</Button>
+                    <Link href={`/event/${event.id}`} className="w-full">
+                      <Button className="w-full transition-transform hover:scale-105">
+                        Register
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               </motion.div>
@@ -255,6 +254,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Coordinators Section */}
+      <section id="coordinators" className="py-16 scroll-mt-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <motion.h2
+            className="mb-12 text-center text-3xl font-bold"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            Event Coordinators
+          </motion.h2>
+          <motion.div
+            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
+            {coordinators.map((coordinator) => (
+              <motion.div key={coordinator.id} variants={fadeIn} whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+                <Card className="flex h-full flex-col bg-card/50 backdrop-blur-sm">
+                  <CardHeader>
+                    <img src={coordinator.photo} alt={coordinator.name} className="rounded-full w-24 h-24 mx-auto mb-4" />
+                    <CardTitle>{coordinator.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <div className="flex items-center gap-2 text-sm justify-center">
+                      <Linkedin className="h-4 w-4" />
+                      <Link href={coordinator.linkedin} target="_blank" className="hover:text-primary transition-colors">
+                        {coordinator.linkedin}
+                      </Link>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm justify-center mt-2">
+                      <Phone className="h-4 w-4" />
+                      <Link href={`tel:${coordinator.phone}`} className="hover:text-primary transition-colors">
+                        {coordinator.phone}
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+
       {/* Footer with Map */}
       <footer className="bg-muted py-16">
         <div className="container mx-auto px-4">
@@ -262,7 +307,7 @@ export default function Home() {
             {/* Map */}
             <div className="h-[400px] rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23e28c1191%3A0x49f75d3281df052a!2s150%20Park%20Row%2C%20New%20York%2C%20NY%2010007!5e0!3m2!1sen!2sus!4v1644262220000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7953.545433001722!2d75.91899577403161!3d14.452402158193664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba256dffbbba99%3A0x2e095478f115a69b!2sUniversity%20BDT%20College%20of%20Engineering%20(UBDT)%20%7C%7C%20Davangere!5e0!3m2!1sen!2sin!4v1740457805142!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -278,15 +323,15 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
                     <MapPin className="h-5 w-5 text-primary" />
-                    <p>150 Park Row, New York, NY 10007</p>
+                    <p>Hadadi Road, Post Box No. 304, Davangere-577004. Karnataka</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-5 w-5 text-primary" />
-                    <p>+1 (555) 123-4567</p>
+                    <Link href="tel:123456789">123456789</Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="h-5 w-5 text-primary" />
-                    <p>info@techfest2024.com</p>
+                    <Link href="mailto:demo@demo.com">demo@demo.com</Link>
                   </div>
                 </div>
               </div>
@@ -294,10 +339,10 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-bold mb-4">Event Coordinators</h3>
                 <div className="space-y-2">
-                  <p>John Doe - Technical Head</p>
-                  <p>+1 (555) 234-5678</p>
-                  <p>Jane Smith - Event Coordinator</p>
-                  <p>+1 (555) 345-6789</p>
+                  <p>John Doe - Technical 1</p>
+                  <Link href="tel:123456789">123456789</Link>
+                  <p>Jane Smith - Technical 2</p>
+                  <Link href="tel:123456789">123456789</Link>
                 </div>
               </div>
 
@@ -333,26 +378,50 @@ export default function Home() {
 const events = [
   {
     id: 1,
-    title: "Hackathon",
-    description: "24-hour coding competition to solve real-world problems",
-    date: "March 15, 2024",
-    venue: "Main Auditorium",
-    teamSize: "Team of 4",
+    title: "Paper Presentation",
+    description: "Present your research and findings on a technical topic",
+    date: "March 17, 2025",
+    venue: "Auditorium",
+    teamSize: "Individual",
   },
   {
     id: 2,
-    title: "Robotics Challenge",
-    description: "Build and program robots to complete specific tasks",
-    date: "March 16, 2024",
-    venue: "Engineering Block",
-    teamSize: "Team of 3",
+    title: "Poster Presentation",
+    description: "Design and present a poster on a technical topic",
+    date: "March 17, 2025",
+    venue: "Auditorium",
+    teamSize: "Individual",
   },
   {
     id: 3,
-    title: "Coding Contest",
-    description: "Test your programming skills with challenging problems",
-    date: "March 17, 2024",
-    venue: "Computer Labs",
+    title: "Line Follower Robot",
+    description: "Build and program a robot to follow a line",
+    date: "March 17, 2025",
+    venue: "Auditorium",
+    teamSize: "Individual",
+  },
+  {
+    id: 4,
+    title: "Quiz",
+    description: "Test your knowledge in a spirited quiz competition",
+    date: "March 17, 2025",
+    venue: "Auditorium",
+    teamSize: "Individual",
+  },
+  {
+    id: 5,
+    title: "Debate",
+    description: "Engage in a thought-provoking debate on tech topics",
+    date: "March 17, 2025",
+    venue: "Auditorium",
+    teamSize: "Individual",
+  },
+  {
+    id: 6,
+    title: "Web Development",
+    description: "Demonstrate your expertise in creating a dynamic website",
+    date: "March 17, 2025",
+    venue: "Auditorium",
     teamSize: "Individual",
   },
 ]
@@ -363,6 +432,7 @@ const timeline = [
     time: "9:00 AM",
     title: "Opening Ceremony",
     description: "Welcome address and event kickoff",
+    phone: "123456789",
   },
   {
     date: "Day 1",
@@ -377,16 +447,33 @@ const timeline = [
     description: "Robot assembly and programming competition",
   },
   {
-    date: "Day 3",
+    date: "Day 2",
     time: "2:00 PM",
     title: "Coding Contest",
     description: "Competitive programming contest",
   },
   {
-    date: "Day 3",
+    date: "Day 2",
     time: "6:00 PM",
     title: "Closing Ceremony",
     description: "Prize distribution and closing remarks",
+  },
+]
+
+const coordinators = [
+  {
+    id: 1,
+    name: "John Doe",
+    photo: "https://picsum.photos/200",
+    linkedin: "https://www.linkedin.com/in/johndoe",
+    phone: "123456789",
+  },
+  {
+    id: 2,
+    name: "John Doe",
+    photo: "https://picsum.photos/200",
+    linkedin: "https://www.linkedin.com/in/johndoe",
+    phone: "123456789",
   },
 ]
 
