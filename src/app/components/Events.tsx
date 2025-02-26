@@ -5,6 +5,7 @@ import { CalendarDays, MapPin, Users } from 'lucide-react'
 import { Button } from "@/src/components/ui/button"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -42,11 +43,32 @@ const Events = () => {
                     >
                         {events.map((event) => (
                             <motion.div key={event.id} variants={fadeIn} whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                                <Card className="flex h-full flex-col bg-card/50 backdrop-blur-sm">
+                                <Card className="flex h-full flex-col bg-card/50 backdrop-blur-sm overflow-hidden">
+                                    <div className="w-full h-48 relative">
+                                        {event.videoUrl ? (
+                                            <video
+                                                src={event.videoUrl}
+                                                className="w-full h-full object-cover"
+                                                autoPlay
+                                                muted
+                                                loop
+                                            />
+                                        ) : (
+                                            <Image
+                                                src={event.image || "/placeholder.svg"}
+                                                alt={event.title}
+                                                fill
+                                                className="object-cover transition-transform group-hover:scale-105"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                        )}
+                                    </div>
+
                                     <CardHeader>
                                         <CardTitle>{event.title}</CardTitle>
                                     </CardHeader>
-                                    <CardContent className="flex-1">
+
+                                    <CardContent className="flex-1 pt-2">
                                         <p className="mb-4 text-muted-foreground">{event.description}</p>
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-sm">
