@@ -4,22 +4,20 @@ import { useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Link from "next/link"
 import {
-  CalendarDays,
   MapPin,
-  Users,
   Github,
   Twitter,
   Linkedin,
   Instagram,
   Phone,
   Mail,
-  Menu,
   Download,
 } from "lucide-react"
 
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { Sheet, SheetContent, SheetTrigger } from "@/src/components/ui/sheet"
+import { coordinators, timeline } from "./DATA"
+import Events from "./components/Events"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -40,7 +38,6 @@ export default function Home() {
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   function calculateTimeLeft() {
@@ -71,47 +68,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold">
-            TechFest
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <Link href="#" className="hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="#events" className="hover:text-primary transition-colors">
-              Events
-            </Link>
-            <Link href="#timeline" className="hover:text-primary transition-colors">
-              Timeline
-            </Link>
-          </nav>
-
-          {/* Mobile Navigation */}
-          <Sheet>
-            <SheetTrigger className="md:hidden">
-              <Menu className="h-6 w-6" />
-            </SheetTrigger>
-            <SheetContent>
-              <nav className="flex flex-col gap-4">
-                <Link href="#" className="text-lg">
-                  Home
-                </Link>
-                <Link href="#events" className="text-lg">
-                  Events
-                </Link>
-                <Link href="#timeline" className="text-lg">
-                  Timeline
-                </Link>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-16">
@@ -167,58 +123,7 @@ export default function Home() {
       </section>
 
       {/* Featured Events */}
-      <section id="events" className="py-16 scroll-mt-16">
-        <div className="mx-auto max-w-6xl px-4">
-          <motion.h2
-            className="mb-12 text-center text-3xl font-bold"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Featured Events
-          </motion.h2>
-          <motion.div
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-            variants={container}
-            initial="hidden"
-            animate="visible"
-          >
-            {events.map((event) => (
-              <motion.div key={event.id} variants={fadeIn} whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                <Card className="flex h-full flex-col bg-card/50 backdrop-blur-sm">
-                  <CardHeader>
-                    <CardTitle>{event.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <p className="mb-4 text-muted-foreground">{event.description}</p>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-sm">
-                        <CalendarDays className="h-4 w-4" />
-                        <span>{event.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <MapPin className="h-4 w-4" />
-                        <span>{event.venue}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <Users className="h-4 w-4" />
-                        <span>{event.teamSize}</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Link href={`/event/${event.id}`} className="w-full">
-                      <Button className="w-full transition-transform hover:scale-105">
-                        Register
-                      </Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      <Events />
 
       {/* Timeline */}
       <section id="timeline" className="bg-muted/50 py-16 scroll-mt-16">
@@ -374,106 +279,4 @@ export default function Home() {
     </div>
   )
 }
-
-const events = [
-  {
-    id: 1,
-    title: "Paper Presentation",
-    description: "Present your research and findings on a technical topic",
-    date: "March 17, 2025",
-    venue: "Auditorium",
-    teamSize: "Individual",
-  },
-  {
-    id: 2,
-    title: "Poster Presentation",
-    description: "Design and present a poster on a technical topic",
-    date: "March 17, 2025",
-    venue: "Auditorium",
-    teamSize: "Individual",
-  },
-  {
-    id: 3,
-    title: "Line Follower Robot",
-    description: "Build and program a robot to follow a line",
-    date: "March 17, 2025",
-    venue: "Auditorium",
-    teamSize: "Individual",
-  },
-  {
-    id: 4,
-    title: "Quiz",
-    description: "Test your knowledge in a spirited quiz competition",
-    date: "March 17, 2025",
-    venue: "Auditorium",
-    teamSize: "Individual",
-  },
-  {
-    id: 5,
-    title: "Debate",
-    description: "Engage in a thought-provoking debate on tech topics",
-    date: "March 17, 2025",
-    venue: "Auditorium",
-    teamSize: "Individual",
-  },
-  {
-    id: 6,
-    title: "Web Development",
-    description: "Demonstrate your expertise in creating a dynamic website",
-    date: "March 17, 2025",
-    venue: "Auditorium",
-    teamSize: "Individual",
-  },
-]
-
-const timeline = [
-  {
-    date: "Day 1",
-    time: "9:00 AM",
-    title: "Opening Ceremony",
-    description: "Welcome address and event kickoff",
-    phone: "123456789",
-  },
-  {
-    date: "Day 1",
-    time: "10:00 AM",
-    title: "Hackathon Begins",
-    description: "24-hour coding marathon starts",
-  },
-  {
-    date: "Day 2",
-    time: "10:00 AM",
-    title: "Robotics Challenge",
-    description: "Robot assembly and programming competition",
-  },
-  {
-    date: "Day 2",
-    time: "2:00 PM",
-    title: "Coding Contest",
-    description: "Competitive programming contest",
-  },
-  {
-    date: "Day 2",
-    time: "6:00 PM",
-    title: "Closing Ceremony",
-    description: "Prize distribution and closing remarks",
-  },
-]
-
-const coordinators = [
-  {
-    id: 1,
-    name: "John Doe",
-    photo: "https://picsum.photos/200",
-    linkedin: "https://www.linkedin.com/in/johndoe",
-    phone: "123456789",
-  },
-  {
-    id: 2,
-    name: "John Doe",
-    photo: "https://picsum.photos/200",
-    linkedin: "https://www.linkedin.com/in/johndoe",
-    phone: "123456789",
-  },
-]
 
