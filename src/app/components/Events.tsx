@@ -88,7 +88,7 @@ const Events = () => {
                                     <CardFooter>
                                         <div className="flex w-full gap-2">
                                             <Button className="flex-1 transition-transform hover:scale-105">
-                                                <Link href="/rules">Explore More</Link>
+                                                <Link href={`/rules/${event.slug}`}>Explore More</Link>
                                             </Button>
                                             {/* <Button variant="outline" className="transition-transform hover:scale-105" asChild>
                                             </Button> */}

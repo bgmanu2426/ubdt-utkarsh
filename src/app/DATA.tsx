@@ -1,21 +1,23 @@
 const events = [
     {
         id: 1,
-        title: "Paper Presentation",
-        description: "Present your research and findings on a technical topic",
-        date: "March 17, 2025",
+        title: "TechnoQuest",
+        description: "Design and present a poster on a technical topic",
+        date: "March 21, 2025",
         venue: "Auditorium",
         teamSize: "Individual",
-        videoUrl: "/robo.mp4"
+        image:"/placeholder.svg",
+        slug: "technoquest"
     },
     {
         id: 2,
-        title: "Poster Presentation",
+        title: "Robo Race",
         description: "Design and present a poster on a technical topic",
-        date: "March 17, 2025",
+        date: "March 21, 2025",
         venue: "Auditorium",
         teamSize: "Individual",
-        image:"/placeholder.svg"
+        videoUrl: "/robo.mp4",
+        slug:"roborace"
     },
     {
         id: 3,

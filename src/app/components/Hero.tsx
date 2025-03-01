@@ -15,7 +15,7 @@ const Hero = () => {
     const [mounted, setMounted] = useState(false)
 
     function calculateTimeLeft() {
-        const difference = +new Date("2025-03-15") - +new Date()
+        const difference = +new Date("2025-03-17") - +new Date()
         if (difference > 0) {
             return {
                 days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -64,19 +64,18 @@ const Hero = () => {
                             exciting prizes.
                         </p>
 
-                        {/* Countdown Timer */}
                         <div className="mb-12 mt-8">
-                            <h2 className="text-white mb-6 text-xl">Registaration Ends In:</h2>
-                            <div className="flex justify-center gap-6">
+                            <h2 className="text-white mb-6 text-base md:text-xl">Registration Ends In:</h2>
+                            <div className="flex justify-center md:gap-5 gap-3">
                                 {Object.keys(timeLeft).map((interval) => (
                                     <div
                                         key={interval}
-                                        className="bg-white/10 backdrop-blur-sm rounded-lg p-6 min-w-[120px] transform hover:scale-105 transition-transform"
+                                        className="bg-white/10 backdrop-blur-sm rounded-lg p-3 md:min-w-[120px] min-w-[60px] transform hover:scale-105 transition-transform"
                                     >
-                                        <div className="text-4xl font-bold text-white mb-1">
+                                        <div className="text-xl md:text-4xl font-bold text-white mb-1">
                                             {timeLeft[interval as keyof typeof timeLeft]}
                                         </div>
-                                        <div className="text-sm text-gray-300 uppercase tracking-wider">{interval}</div>
+                                        <div className="text-xs md:text-sm text-gray-300 uppercase tracking-wider">{interval}</div>
                                     </div>
                                 ))}
                             </div>
