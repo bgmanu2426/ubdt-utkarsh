@@ -87,10 +87,11 @@ const Events = () => {
                                     </CardContent>
                                     <CardFooter>
                                         <div className="flex w-full gap-2">
-                                            <Button className="flex-1 transition-transform hover:scale-105">Register</Button>
-                                            <Button variant="outline" className="transition-transform hover:scale-105" asChild>
-                                                <Link href="/rules">View Rules</Link>
+                                            <Button className="flex-1 transition-transform hover:scale-105">
+                                                <Link href="/rules">Explore More</Link>
                                             </Button>
+                                            {/* <Button variant="outline" className="transition-transform hover:scale-105" asChild>
+                                            </Button> */}
                                         </div>
                                     </CardFooter>
                                 </Card>

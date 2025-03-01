@@ -28,9 +28,6 @@ export default function Home() {
 
       {/* Timeline */}
       <Timeline />
-
-      {/* Footer with Map */}
-      <Footer />
     </div>
   )
 }

@@ -58,7 +58,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <div className="text-center">
-                        <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-6xl">TechFest 2024</h1>
+                        <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-6xl">Utkarsh - 2k25</h1>
                         <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-200">
                             Join the biggest inter-college technical festival. Showcase your skills, compete with the best, and win
                             exciting prizes.
