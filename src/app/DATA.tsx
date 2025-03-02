@@ -98,24 +98,31 @@ const technoquestCoordinators = [
         name: "Sindhu KR",
         phone: "+918746884530",
         linkedin: "https://www.linkedin.com/in/sindhu-kr-3aabb2341",
-        image: "/placeholder.svg?height=400&width=400",
     },
     {
-        name: "Jane Smith",
-        role: "Event Coordinator",
-        phone: "+1 (555) 345-6789",
-        email: "jane.smith@techfest.com",
-        linkedin: "https://linkedin.com/in/janesmith",
-        image: "/placeholder.svg?height=400&width=400",
+        name: "Naveen Sagar T S",
+        phone: "+918660859914",
     },
     {
-        name: "Alex Johnson",
-        role: "Hackathon Lead",
-        phone: "+1 (555) 456-7890",
-        email: "alex.johnson@techfest.com",
-        linkedin: "https://linkedin.com/in/alexjohnson",
-        image: "/placeholder.svg?height=400&width=400",
+        name: "Chandana T M",
+        phone: "+919480286697",
     }
 ]
 
-export { events, timeline, technoquestCoordinators }
+const clashofmindsCoordinators = [
+    {
+        name: "Sindhu KR",
+        phone: "+918746884530",
+        linkedin: "https://www.linkedin.com/in/sindhu-kr-3aabb2341",
+    },
+    {
+        name: "Naveen Sagar T S",
+        phone: "+918660859914",
+    },
+    {
+        name: "Chandana T M",
+        phone: "+919480286697",
+    }
+]
+
+export { events, timeline, technoquestCoordinators, clashofmindsCoordinators }

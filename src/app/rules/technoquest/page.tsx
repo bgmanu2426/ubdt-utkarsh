@@ -185,19 +185,13 @@ export default function TechnoQuest() {
                                         transition={{ duration: 0.2 }}
                                         className="flex"
                                     >
-                                        <Card className="w-full flex flex-row bg-card/50 backdrop-blur-sm overflow-hidden items-center justify-center">
-                                            <div className="relative w-32 h-32">
-                                                <Image
-                                                    src={coordinator.image || "/placeholder.svg"}
-                                                    alt={coordinator.name}
-                                                    fill
-                                                    className="object-cover rounded-full p-4"
-                                                />
-                                            </div>
-                                            <CardContent className="w-2/3 p-4 flex flex-col justify-center">
-                                                <h3 className="text-base font-bold mb-1">{coordinator.name}</h3>
+                                        <Card className="w-full bg-card/50 backdrop-blur-sm overflow-hidden items-center justify-center">
+                                            <CardContent className="p-4 flex flex-col justify-center text-center">
+                                                <h3 className="text-base font-bold mb-1">
+                                                    {coordinator.name}
+                                                </h3>
                                                 <div className="space-y-1 text-sm">
-                                                    <div className="flex items-center gap-1">
+                                                    <div className="flex items-center gap-1 justify-center">
                                                         <Phone className="h-3 w-3 text-muted-foreground" />
                                                         <a
                                                             href={`tel:${coordinator.phone}`}
@@ -206,17 +200,22 @@ export default function TechnoQuest() {
                                                             {coordinator.phone}
                                                         </a>
                                                     </div>
-                                                    <div className="flex items-center gap-1">
-                                                        <Linkedin className="h-3 w-3 text-muted-foreground" />
-                                                        <a
-                                                            href={coordinator.linkedin}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="hover:text-primary transition-colors text-xs"
-                                                        >
-                                                            {coordinator.linkedin.split('/').filter(Boolean).pop()}
-                                                        </a>
-                                                    </div>
+                                                    {coordinator.linkedin && (
+                                                        <div className="flex items-center gap-1 justify-center">
+                                                            <Linkedin className="h-3 w-3 text-muted-foreground" />
+                                                            <a
+                                                                href={coordinator.linkedin}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="hover:text-primary transition-colors text-xs"
+                                                            >
+                                                                {coordinator.linkedin
+                                                                    ?.split("/")
+                                                                    .filter(Boolean)
+                                                                    .pop()}
+                                                            </a>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </CardContent>
                                         </Card>
