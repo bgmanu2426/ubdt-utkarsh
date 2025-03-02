@@ -55,7 +55,7 @@ const events = [
         description: "A high-speed competition where autonomous or manually controlled robots navigate challenging tracks",
         date: "March 21, 2025",
         venue: "Mechanical Department",
-        teamSize: "Individual",
+        teamSize: "Maximum 4",
         image: "/placeholder.svg",
         slug: "robovelocity"
     },

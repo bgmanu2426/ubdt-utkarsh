@@ -1,4 +1,5 @@
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { IoIosCall } from "react-icons/io";
+import { LuMapPin } from "react-icons/lu";
 import Link from 'next/link'
 import React from 'react'
 
@@ -22,30 +23,32 @@ const Footer = () => {
 
                         <div className="space-y-8">
                             <div>
-                                <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
+                                <h3 className="text-2xl font-bold mb-4">Event Venue</h3>
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-2">
-                                        <MapPin className="h-5 w-5 text-primary" />
+                                        <LuMapPin className="h-5 w-5 text-primary" />
                                         <p>Hadadi Road, Post Box No. 304, Davangere-577004. Karnataka</p>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5 text-primary" />
-                                        <Link href="tel:123456789">123456789</Link>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Mail className="h-5 w-5 text-primary" />
-                                        <Link href="mailto:demo@demo.com">demo@demo.com</Link>
                                     </div>
                                 </div>
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold mb-4">Event Coordinators</h3>
-                                <div className="space-y-2">
-                                    <p>John Doe - Technical 1</p>
-                                    <Link href="tel:123456789">123456789</Link>
-                                    <p>Jane Smith - Technical 2</p>
-                                    <Link href="tel:123456789">123456789</Link>
+                                <h3 className="text-xl font-bold mb-4">Technical Secretaries</h3>
+                                <div className="space-y-4">
+                                    <div className="flex flex-col space-y-1">
+                                        <span className="font-medium">Nandini SR</span>
+                                        <div className="flex items-center gap-2">
+                                            <IoIosCall className="h-5 w-5 text-primary" />
+                                            <Link href="tel:+916362626353">+916362626353</Link>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col space-y-1">
+                                        <span className="font-medium">Lakshminarayana BG</span>
+                                        <div className="flex items-center gap-2">
+                                            <IoIosCall className="h-5 w-5 text-primary" />
+                                            <Link href="tel:+917204000742">+917204000742</Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +58,7 @@ const Footer = () => {
                         <p>&copy; {new Date().getFullYear()} UBDT Utkarsh. All rights reserved.</p>
                         <br />
                         <p>
-                          Developed by <Link href="https://github.com/bgmanu2426" target="_blank" rel="noopener noreferrer">bgmanu2426</Link>
+                            Developed by <Link href="https://github.com/bgmanu2426" target="_blank" rel="noopener noreferrer">bgmanu2426</Link>
                         </p>
                     </div>
                 </div>

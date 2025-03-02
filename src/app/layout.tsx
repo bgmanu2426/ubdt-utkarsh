@@ -8,11 +8,18 @@ import Footer from "./components/Footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "TechFest 2024 - Inter College Technical Festival",
-  description: "Join the biggest inter-college technical festival.",
-  other: {
-    "link-preload": "/brochure.pdf",
-  },
+  title: "UBDT Utkarsh 2k25 - Inter College Technical Festival",
+  description: "UBDT Utkarsh is an inter college technical festival organized by University BDT College of Engineering, Davangere.",
+  keywords: [
+    "UBDT", 
+    "Utkarsh",
+    "2k25",
+    "technical festival",
+    "college festival",
+    "inter college",
+    "University BDT College",
+    "Davangere"
+  ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,11 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
         <Header />
         {children}
-        <Footer/>
-        
+        <Footer />
       </body>
     </html>
   )
 }
-
-
