@@ -154,7 +154,7 @@ const webweaveCoordinators = [
     {
         name: "SNEHA HM",
         phone: "+917899711396",
-        linkedin: "https://www.linkedin.com/in/sindhu-kr-3aabb2341",
+        linkedin: "https://www.linkedin.com/in/sneha-hanjgimath-0188a0257",
     },
     {
         name: "Ramya R K",
