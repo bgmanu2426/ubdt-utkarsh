@@ -6,6 +6,7 @@ import { Button } from "@/src/components/ui/button"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -88,7 +89,7 @@ const Events = () => {
                                     <CardFooter>
                                         <div className="flex w-full gap-2">
                                             <Button className="flex-1 transition-transform hover:scale-105">
-                                                <Link href={`/rules/${event.slug}`}>Explore More</Link>
+                                                <Link href={`/rules/${event.slug}`}>Explore More </Link><FaLongArrowAltRight />
                                             </Button>
                                             {/* <Button variant="outline" className="transition-transform hover:scale-105" asChild>
                                             </Button> */}

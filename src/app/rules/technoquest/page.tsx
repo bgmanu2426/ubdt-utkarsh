@@ -2,12 +2,12 @@
 
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowLeft, Download, Linkedin, Phone } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
 import { technoquestCoordinators } from "../../DATA"
+import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
     const images = [
@@ -74,7 +74,7 @@ export default function TechnoQuest() {
                 <div className="mb-8 flex items-center gap-4">
                     <Button variant="outline" size="icon" asChild>
                         <Link href="/">
-                            <ArrowLeft className="h-4 w-4" />
+                            <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
                     <h1 className="text-3xl font-bold">TECHNO QUEST</h1>
@@ -127,6 +127,13 @@ export default function TechnoQuest() {
                                         <li>Participation certificates will be awarded to all participants.</li>
                                     </ul>
                                 </motion.div>
+
+                                <motion.div variants={fadeIn}>
+                                    <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        <li> 150/- per team (Group of 2)</li>
+                                    </ul>
+                                </motion.div>
                             </motion.div>
                         </CardContent>
                     </Card>
@@ -142,9 +149,9 @@ export default function TechnoQuest() {
                             variant="outline"
                             size="lg"
                             className="w-full sm:w-auto group"
-                            onClick={() => window.open("/brochure.pdf", "_blank")}
+                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/Quiz-rulebook.pdf", "_blank")}
                         >
-                            <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                            <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                             Download Brochure
                         </Button>
                     </div>
@@ -169,7 +176,7 @@ export default function TechnoQuest() {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                Meet Our Coordinators
+                                Event Coordinators
                             </motion.h2>
                             <motion.div
                                 className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
@@ -192,7 +199,7 @@ export default function TechnoQuest() {
                                                 </h3>
                                                 <div className="space-y-1 text-sm">
                                                     <div className="flex items-center gap-1 justify-center">
-                                                        <Phone className="h-3 w-3 text-muted-foreground" />
+                                                        <FaPhoneAlt className="h-3 w-3 text-muted-foreground" />
                                                         <a
                                                             href={`tel:${coordinator.phone}`}
                                                             className="hover:text-primary transition-colors text-xs"
@@ -202,7 +209,7 @@ export default function TechnoQuest() {
                                                     </div>
                                                     {coordinator.linkedin && (
                                                         <div className="flex items-center gap-1 justify-center">
-                                                            <Linkedin className="h-3 w-3 text-muted-foreground" />
+                                                            <FaLinkedin className="h-3 w-3 text-muted-foreground" />
                                                             <a
                                                                 href={coordinator.linkedin}
                                                                 target="_blank"

@@ -1,14 +1,58 @@
 "use client"
 
+import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowLeft, Download, Linkedin, Mail, Phone } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import Image from "next/image"
-import { coordinators } from "../../DATA"
+import { clashofmindsCoordinators } from "../../DATA"
+import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
-export default function DebateRulesPage() {
+function Carousel() {
+    const images = [
+        "/placeholder.svg",
+        "/placeholder.svg",
+        "/placeholder.svg",
+    ]
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
+    }
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
+    }
+
+    return (
+        <div className="relative">
+            <div className="overflow-hidden">
+                <Image
+                    src={images[currentIndex]}
+                    alt={`Photo ${currentIndex + 1}`}
+                    width={800}
+                    height={400}
+                    className="w-full"
+                />
+            </div>
+            <button
+                onClick={prevSlide}
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+            >
+                Prev
+            </button>
+            <button
+                onClick={nextSlide}
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+            >
+                Next
+            </button>
+        </div>
+    )
+}
+
+export default function ClashOfMinds() {
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
@@ -26,41 +70,42 @@ export default function DebateRulesPage() {
 
     return (
         <div className="min-h-screen bg-background pt-16">
-            <div className="container mx-auto px-4 py-12">
+            <div className="container mx-auto md:px-10 lg:px-8 px-3 py-12">
                 <div className="mb-8 flex items-center gap-4">
                     <Button variant="outline" size="icon" asChild>
                         <Link href="/">
-                            <ArrowLeft className="h-4 w-4" />
+                            <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">Tech Debate Rules</h1>
+                    <h1 className="text-3xl font-bold">TECHNO QUEST</h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Tech Debate Rules</CardTitle>
-                            <CardDescription>Debate on current technology trends and ethical issues</CardDescription>
+                            <CardTitle>Rules for technoquest (Quiz)</CardTitle>
+                            <CardDescription>
+                                A battle of knowledge where participants tackle challenging questions across various technical domains
+                            </CardDescription>
                         </CardHeader>
                         <CardContent>
                             <motion.div variants={container} initial="hidden" animate="visible" className="space-y-6">
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Teams must consist of exactly 2 members</li>
-                                        <li>All team members must be enrolled in the same college</li>
-                                        <li>Each participant can be part of only one team</li>
+                                        <li>Open to all students irrespective of their branches and year.</li>
+                                        <li>Team should consist of 2 members.</li>
+                                        <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Debate Format</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Quiz Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Topics will be announced 24 hours before the event</li>
-                                        <li>Each team will be assigned a position (for or against)</li>
-                                        <li>7 minutes for opening statements</li>
-                                        <li>5 minutes for rebuttal</li>
-                                        <li>3 minutes for closing arguments</li>
-                                        <li>Q&amp;A session with judges (5 minutes)</li>
+                                        <li>This event consists of three rounds, after every round there will elimination of participants, only selected ones are allowed to participate in next further rounds.</li>
+                                        <li>First round consists of 30 MCQ's with 1 mark for each</li>
+                                        <li>Similarly the second route comprises 15 questions on logo identification</li>
+                                        <li>In the final round comprises to identify the famous personalities and their inventions</li>
+                                        <li>For each round the time allotted would be 30 minutes </li>
                                     </ul>
                                 </motion.div>
 
@@ -76,32 +121,52 @@ export default function DebateRulesPage() {
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Rules</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Prizes</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>No personal attacks or offensive language</li>
-                                        <li>Teams must stick to their assigned position</li>
-                                        <li>No interrupting the opposing team</li>
-                                        <li>Citations and sources should be provided for facts</li>
-                                        <li>Judges' decision is final</li>
+                                        <li>Top 2 teams will get a medal with certificate</li>
+                                        <li>Participation certificates will be awarded to all participants.</li>
+                                    </ul>
+                                </motion.div>
+
+                                <motion.div variants={fadeIn}>
+                                    <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        <li> 150/- per team (Group of 2)</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
                         </CardContent>
                     </Card>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                        <Button size="lg" className="w-full sm:w-auto">
+                        <Button
+                            size="lg"
+                            className="w-full sm:w-auto"
+                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                        >
                             Register Now
                         </Button>
                         <Button
                             variant="outline"
                             size="lg"
                             className="w-full sm:w-auto group"
-                            onClick={() => window.open("/brochure.pdf", "_blank")}
+                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/Quiz-rulebook.pdf", "_blank")}
                         >
-                            <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                            <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                             Download Brochure
                         </Button>
                     </div>
+
+                    {/* <section className="py-16">
+                        <motion.h2
+                            className="mb-6 text-center text-3xl font-bold"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            Gallery
+                        </motion.h2>
+                        <Carousel />
+                    </section> */}
 
                     <section id="coordinators" className="py-16 scroll-mt-16">
                         <div className="mx-auto max-w-6xl px-4">
@@ -111,56 +176,53 @@ export default function DebateRulesPage() {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                Meet Our Coordinators
+                                Event Coordinators
                             </motion.h2>
                             <motion.div
-                                className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                                className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                                 variants={container}
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {coordinators.map((coordinator, index) => (
+                                {clashofmindsCoordinators.map((coordinator, index) => (
                                     <motion.div
                                         key={index}
                                         variants={fadeIn}
                                         whileHover={{ scale: 1.03 }}
                                         transition={{ duration: 0.2 }}
-                                        className="flex flex-col items-center"
+                                        className="flex"
                                     >
-                                        <Card className="w-full bg-card/50 backdrop-blur-sm overflow-hidden">
-                                            <div className="h-32 relative overflow-hidden">
-                                                <Image
-                                                    src={coordinator.image || "/placeholder.svg"}
-                                                    alt={coordinator.name}
-                                                    fill
-                                                    className="object-cover transition-transform hover:scale-105"
-                                                />
-                                            </div>
-                                            <CardContent className="p-4">
-                                                <h3 className="text-base font-bold mb-1">{coordinator.name}</h3>
-                                                <p className="text-primary text-sm mb-2">{coordinator.role}</p>
-
+                                        <Card className="w-full bg-card/50 backdrop-blur-sm overflow-hidden items-center justify-center">
+                                            <CardContent className="p-4 flex flex-col justify-center text-center">
+                                                <h3 className="text-base font-bold mb-1">
+                                                    {coordinator.name}
+                                                </h3>
                                                 <div className="space-y-1 text-sm">
-                                                    <div className="flex items-center gap-1">
-                                                        <Phone className="h-3 w-3 text-muted-foreground" />
-                                                        <span className="text-xs">{coordinator.phone}</span>
-                                                    </div>
-                                                    <div className="flex items-center gap-1">
-                                                        <Mail className="h-3 w-3 text-muted-foreground" />
-                                                        <span className="text-xs">{coordinator.email}</span>
-                                                    </div>
-                                                    <div className="flex items-center gap-1">
-                                                        <Linkedin className="h-3 w-3 text-muted-foreground" />
-                                                        <a href={coordinator.linkedin} />
+                                                    <div className="flex items-center gap-1 justify-center">
+                                                        <FaPhoneAlt className="h-3 w-3 text-muted-foreground" />
                                                         <a
-                                                            href={coordinator.linkedin}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
+                                                            href={`tel:${coordinator.phone}`}
                                                             className="hover:text-primary transition-colors text-xs"
                                                         >
-                                                            LinkedIn
+                                                            {coordinator.phone}
                                                         </a>
                                                     </div>
+                                                    {coordinator.linkedin && (
+                                                        <div className="flex items-center gap-1 justify-center">
+                                                            <FaLinkedin className="h-3 w-3 text-muted-foreground" />
+                                                            <a
+                                                                href={coordinator.linkedin}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="hover:text-primary transition-colors text-xs"
+                                                            >
+                                                                {coordinator.linkedin
+                                                                    ?.split("/")
+                                                                    .filter(Boolean)
+                                                                    .pop()}
+                                                            </a>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </CardContent>
                                         </Card>

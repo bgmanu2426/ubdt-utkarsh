@@ -6,7 +6,7 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
-        image:"/placeholder.svg",
+        image: "/placeholder.svg",
         slug: "technoquest"
     },
     {
@@ -17,7 +17,7 @@ const events = [
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
         image: "/placeholder.svg",
-        slug:"clashofminds"
+        slug: "clashofminds"
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Maximum 3",
-        image:"/placeholder.svg",
+        image: "/placeholder.svg",
         slug: "webweave"
     },
     {
@@ -36,7 +36,7 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2 or 4",
-        image:"/placeholder.svg",
+        image: "/placeholder.svg",
         slug: "startupsimulation"
     },
     {
@@ -46,16 +46,16 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Individual",
-        image:"/placeholder.svg"
+        image: "/placeholder.svg"
     },
     {
         id: 6,
-        title: "Robo Race",
+        title: "Robo Velocity",
         description: "A high-speed competition where autonomous or manually controlled robots navigate challenging tracks",
         date: "March 21, 2025",
         venue: "Auditorium",
         teamSize: "Individual",
-        image:"/placeholder.svg"
+        image: "/placeholder.svg"
     },
 ]
 
@@ -111,18 +111,84 @@ const technoquestCoordinators = [
 
 const clashofmindsCoordinators = [
     {
-        name: "Sindhu KR",
-        phone: "+918746884530",
-        linkedin: "https://www.linkedin.com/in/sindhu-kr-3aabb2341",
+        name: "Kavya SN",
+        phone: "+919844176304",
+        linkedin: "https://www.linkedin.com/in/kavya-s-n-b2a53728b",
     },
     {
-        name: "Naveen Sagar T S",
-        phone: "+918660859914",
+        name: "Yogananda R",
+        phone: "+916361565338",
     },
     {
-        name: "Chandana T M",
-        phone: "+919480286697",
+        name: "Chethan Kumar HU",
+        phone: "+918296474840",
     }
 ]
 
-export { events, timeline, technoquestCoordinators, clashofmindsCoordinators }
+const webweaveCoordinators = [
+    {
+        name: "SNEHA HM",
+        phone: "+917899711396",
+        linkedin: "https://www.linkedin.com/in/sindhu-kr-3aabb2341",
+    },
+    {
+        name: "Ramya R K",
+        phone: "+917892465720",
+        linkedin: "https://www.linkedin.com/in/ramya-r-k-362630331"
+    },
+    {
+        name: "Apoorva K Acharya",
+        phone: "+917349145233",
+    }
+]
+
+const startupsimulationCoordinators = [
+    {
+        name: "Akash DS",
+        phone: "+917019883153"
+    },
+    {
+        name: "RASHMI K S",
+        phone: "+918050812814",
+        linkedin: "https://www.linkedin.com/in/rashmi-k-s-741a0626a"
+    },
+    {
+        name: "Vinay J D",
+        phone: "+919741435484",
+        linkedin: "https://www.linkedin.com/in/vinay-jd-8735582a5"
+    }
+]
+
+const robovelocityCoordinators = [
+    {
+        name: "Siddesh B",
+        phone: "+919663436808",
+        linkedin: "www.linkedin.com/in/bsiddesh"
+    },
+    {
+        name: "Vinayak Kubakaddi",
+        phone: "+917756015274"
+    },
+    {
+        name: "Abhishek Singh",
+        phone: "+917080868898"
+    }
+]
+
+const robovelocityCoordinators = [
+    {
+        name: "Siddesh B",
+        phone: "+919663436808",
+        linkedin: "www.linkedin.com/in/bsiddesh"
+    },
+    {
+        name: "Vinayak Kubakaddi",
+        phone: "+917756015274"
+    },
+    {
+        name: "Abhishek Singh",
+        phone: "+917080868898"
+    }
+]
+
+export { events, timeline, technoquestCoordinators, clashofmindsCoordinators, webweaveCoordinators, startupsimulationCoordinators, robovelocityCoordinators }

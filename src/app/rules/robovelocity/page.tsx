@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { technoquestCoordinators, webweaveCoordinators } from "../../DATA"
+import { clashofmindsCoordinators } from "../../DATA"
 import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
@@ -52,7 +52,7 @@ function Carousel() {
     )
 }
 
-export default function WebWeave() {
+export default function RoboVelocity() {
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
@@ -77,14 +77,14 @@ export default function WebWeave() {
                             <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">WEB WEAVE</h1>
+                    <h1 className="text-3xl font-bold">TECHNO QUEST</h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Rules for Web Weave</CardTitle>
+                            <CardTitle>Rules for technoquest (Quiz)</CardTitle>
                             <CardDescription>
-                            A competition where participants create a dynamic website from scratch to showcase their skills to solve real-world problems.
+                                A battle of knowledge where participants tackle challenging questions across various technical domains
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -93,37 +93,37 @@ export default function WebWeave() {
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
                                         <li>Open to all students irrespective of their branches and year.</li>
-                                        <li>Both Technical and non-technical students can participate.</li>
-                                        <li>This is a group event containing maximum of 3 participants</li>
+                                        <li>Team should consist of 2 members.</li>
                                         <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Event Format</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Quiz Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>This event consists of a single round where a problem statement is given which has to be solved within 3 hours.</li>
-                                        <li>Problem statement will be provided at the beginning of the event.</li>
-                                        <li>A total of 3+1 Hours is given to analyze, strategize, and implement their solution.</li>
-                                        <li>After submission, each team will participate in a Q&A session on thier solution.</li>
-                                        <li>Judges will evaluate the clarity, logic, and feasibility of their responses.</li>
+                                        <li>This event consists of three rounds, after every round there will elimination of participants, only selected ones are allowed to participate in next further rounds.</li>
+                                        <li>First round consists of 30 MCQ's with 1 mark for each</li>
+                                        <li>Similarly the second route comprises 15 questions on logo identification</li>
+                                        <li>In the final round comprises to identify the famous personalities and their inventions</li>
+                                        <li>For each round the time allotted would be 30 minutes </li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Judging Criteria</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Functionality & Execution (40%) </li>
-                                        <li>Design & User Experience (30%) </li>
-                                        <li>Creativity & Innovation (20%) </li>
-                                        <li>Robustness & Responsiveness (10%) </li>
+                                        <li>Content and argument quality (30%)</li>
+                                        <li>Technical accuracy (25%)</li>
+                                        <li>Presentation and delivery (20%)</li>
+                                        <li>Rebuttal effectiveness (15%)</li>
+                                        <li>Time management (10%)</li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Prizes</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Top 2 teams will get a cash prize with certificate</li>
+                                        <li>Top 2 teams will get a medal with certificate</li>
                                         <li>Participation certificates will be awarded to all participants.</li>
                                     </ul>
                                 </motion.div>
@@ -131,7 +131,7 @@ export default function WebWeave() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li> 100/- per participant</li>
+                                        <li> 150/- per team (Group of 2)</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
@@ -184,7 +184,7 @@ export default function WebWeave() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {webweaveCoordinators.map((coordinator, index) => (
+                                {clashofmindsCoordinators.map((coordinator, index) => (
                                     <motion.div
                                         key={index}
                                         variants={fadeIn}
