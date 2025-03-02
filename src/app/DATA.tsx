@@ -46,16 +46,18 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Individual",
-        image: "/placeholder.svg"
+        image: "/placeholder.svg",
+        slug: "paperpresentation"
     },
     {
         id: 6,
         title: "Robo Velocity",
         description: "A high-speed competition where autonomous or manually controlled robots navigate challenging tracks",
         date: "March 21, 2025",
-        venue: "Auditorium",
+        venue: "Mechanical Department",
         teamSize: "Individual",
-        image: "/placeholder.svg"
+        image: "/placeholder.svg",
+        slug: "robovelocity"
     },
 ]
 

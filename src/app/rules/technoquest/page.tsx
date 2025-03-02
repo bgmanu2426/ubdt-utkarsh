@@ -82,7 +82,7 @@ export default function TechnoQuest() {
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Rules for technoquest (Quiz)</CardTitle>
+                            <CardTitle>Rules for TechnoQuest (Quiz)</CardTitle>
                             <CardDescription>
                                 A battle of knowledge where participants tackle challenging questions across various technical domains
                             </CardDescription>
