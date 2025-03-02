@@ -188,7 +188,7 @@ const robovelocityCoordinators = [
     {
         name: "Siddesh B",
         phone: "+919663436808",
-        linkedin: "www.linkedin.com/in/bsiddesh"
+        linkedin: "https://www.linkedin.com/in/bsiddesh/"
     },
     {
         name: "Vinayak Kubakaddi",

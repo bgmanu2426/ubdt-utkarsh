@@ -110,17 +110,6 @@ export default function TechnoQuest() {
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Judging Criteria</h3>
-                                    <ul className="list-disc pl-5 space-y-1">
-                                        <li>Content and argument quality (30%)</li>
-                                        <li>Technical accuracy (25%)</li>
-                                        <li>Presentation and delivery (20%)</li>
-                                        <li>Rebuttal effectiveness (15%)</li>
-                                        <li>Time management (10%)</li>
-                                    </ul>
-                                </motion.div>
-
-                                <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Prizes</h3>
                                     <ul className="list-disc pl-5 space-y-1">
                                         <li>Top 2 teams will get a medal with certificate</li>
