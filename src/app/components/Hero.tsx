@@ -60,8 +60,7 @@ const Hero = () => {
                     <div className="text-center">
                         <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-6xl">Utkarsh - 2k25</h1>
                         <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-200">
-                            Join the biggest inter-college technical festival. Showcase your skills, compete with the best, and win
-                            exciting prizes.
+                            UTKARSH 2K25 is a platform for students to showcase their technical skills and knowledge hosted by Student Association and Technical Commitee of UBDT College of Engineering, Davangere.
                         </p>
 
                         <div className="mb-12 mt-8">

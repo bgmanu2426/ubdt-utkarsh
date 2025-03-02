@@ -63,37 +63,60 @@ const events = [
 
 const timeline = [
     {
-        date: "Day 1",
+        date: "March 20, 2025",
         time: "9:00 AM",
-        title: "Opening Ceremony",
-        description: "Welcome address and event kickoff",
-        phone: "123456789",
+        title: "Registration Begins",
+        description: "Registration desk opens for all participants"
     },
     {
-        date: "Day 1",
-        time: "10:00 AM",
-        title: "Hackathon Begins",
-        description: "24-hour coding marathon starts",
+        date: "March 20, 2025",
+        time: "9:30 AM",
+        title: "Inauguration Ceremony",
+        description: "Official opening of UTKARSH technical fest"
     },
     {
-        date: "Day 2",
-        time: "10:00 AM",
-        title: "Robotics Challenge",
-        description: "Robot assembly and programming competition",
+        date: "March 20, 2025",
+        time: "10:30 AM",
+        title: "TechnoQuest",
+        description: "Technical quiz competition begins"
     },
     {
-        date: "Day 2",
-        time: "2:00 PM",
-        title: "Coding Contest",
-        description: "Competitive programming contest",
+        date: "March 20, 2025",
+        time: "11:00 AM",
+        title: "Robo Velocity",
+        description: "Robo racing competition starts"
     },
     {
-        date: "Day 2",
-        time: "6:00 PM",
-        title: "Closing Ceremony",
-        description: "Prize distribution and closing remarks",
+        date: "March 20, 2025",
+        time: "11:30 AM",
+        title: "Web Weave - Problem Statement",
+        description: "Web development challenge is shared with participants"
     },
-]
+    {
+        date: "March 20, 2025",
+        time: "1:00 PM",
+        title: "Startup Simulation - Ideation Phase",
+        description: "Teams begin brainstorming and outlining their startup concepts"
+    },
+    {
+        date: "March 20, 2025",
+        time: "1:00 PM",
+        title: "Paper Presentation",
+        description: "Technical paper presentations begins"
+    },
+    {
+        date: "March 20, 2025",
+        time: "2:30 PM",
+        title: "Clash of Minds",
+        description: "Debate and argumentation competition starts"
+    },
+    {
+        date: "March 20, 2025",
+        time: "4:30 PM",
+        title: "Award Ceremony and Valedictory",
+        description: "Winners of all events are announced and awarded"
+    }
+];
 
 const technoquestCoordinators = [
     {
