@@ -145,8 +145,8 @@ const clashofmindsCoordinators = [
         phone: "+916361565338",
     },
     {
-        name: "Chethan Kumar HU",
-        phone: "+918296474840",
+        name: "Bhanuprakash MP",
+        phone: "+918867554428",
     }
 ]
 
@@ -162,25 +162,25 @@ const webweaveCoordinators = [
         linkedin: "https://www.linkedin.com/in/ramya-r-k-362630331"
     },
     {
-        name: "Apoorva K Acharya",
-        phone: "+917349145233",
+        name: "Vinay J D",
+        phone: "+919741435484",
+        linkedin: "https://www.linkedin.com/in/vinay-jd-8735582a5"
     }
 ]
 
 const startupsimulationCoordinators = [
-    {
-        name: "Akash DS",
-        phone: "+917019883153"
-    },
     {
         name: "RASHMI K S",
         phone: "+918050812814",
         linkedin: "https://www.linkedin.com/in/rashmi-k-s-741a0626a"
     },
     {
-        name: "Vinay J D",
-        phone: "+919741435484",
-        linkedin: "https://www.linkedin.com/in/vinay-jd-8735582a5"
+        name: "Abhishek Singh",
+        phone: "+917080868898",
+    },
+    {
+        name: "Steve M John",
+        phone: "+919380663341",
     }
 ]
 
@@ -195,20 +195,20 @@ const robovelocityCoordinators = [
         phone: "+917756015274"
     },
     {
-        name: "Abhishek Singh",
-        phone: "+917080868898"
+        name: "Banakara Shreenivasa",
+        phone: "+919880467849"
     }
 ]
 
 const paperpresentationCoordinators = [
     {
+        name: "Akash DS",
+        phone: "+917019883153"
+    },
+    {
         name: "Spoorti Ekesh Holiyappanavar",
         phone: "+919380229730",
         linkedin: "https://www.linkedin.com/in/spoorti-ekesh-holiyappanavar-ba51262a3"
-    },
-    {
-        name: "Bhanuprakash MP",
-        phone: "+918867554428",
     },
     {
         name: "Kavya V",
