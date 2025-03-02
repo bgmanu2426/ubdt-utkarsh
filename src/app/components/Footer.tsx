@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -20,7 +20,6 @@ const Footer = () => {
                             />
                         </div>
 
-                        {/* Contact Information */}
                         <div className="space-y-8">
                             <div>
                                 <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
@@ -49,29 +48,15 @@ const Footer = () => {
                                     <Link href="tel:123456789">123456789</Link>
                                 </div>
                             </div>
-
-                            <div>
-                                <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-                                <div className="flex gap-4">
-                                    <Link href="#" className="hover:text-primary transition-colors">
-                                        <Twitter className="h-6 w-6" />
-                                    </Link>
-                                    <Link href="#" className="hover:text-primary transition-colors">
-                                        <Instagram className="h-6 w-6" />
-                                    </Link>
-                                    <Link href="#" className="hover:text-primary transition-colors">
-                                        <Linkedin className="h-6 w-6" />
-                                    </Link>
-                                    <Link href="#" className="hover:text-primary transition-colors">
-                                        <Github className="h-6 w-6" />
-                                    </Link>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <div className="mt-16 pt-8 border-t text-center text-sm text-muted-foreground">
-                        <p>&copy; {new Date().getFullYear()} TechFest. All rights reserved.</p>
+                        <p>&copy; {new Date().getFullYear()} UBDT Utkarsh. All rights reserved.</p>
+                        <br />
+                        <p>
+                          Developed by <Link href="https://github.com/bgmanu2426" target="_blank" rel="noopener noreferrer">bgmanu2426</Link>
+                        </p>
                     </div>
                 </div>
             </footer>

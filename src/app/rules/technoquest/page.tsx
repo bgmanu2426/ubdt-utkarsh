@@ -7,7 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { coordinators } from "../../DATA"
+import { technoquestCoordinators } from "../../DATA"
 
 function Carousel() {
     const images = [
@@ -52,7 +52,7 @@ function Carousel() {
     )
 }
 
-export default function DebateRulesPage() {
+export default function TechnoQuest() {
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
@@ -77,34 +77,35 @@ export default function DebateRulesPage() {
                             <ArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">Tech Debate Rules</h1>
+                    <h1 className="text-3xl font-bold">TECHNO QUEST</h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Tech Debate Rules</CardTitle>
-                            <CardDescription>Debate on current technology trends and ethical issues</CardDescription>
+                            <CardTitle>Rules for technoquest (Quiz)</CardTitle>
+                            <CardDescription>
+                                A battle of knowledge where participants tackle challenging questions across various technical domains
+                            </CardDescription>
                         </CardHeader>
                         <CardContent>
                             <motion.div variants={container} initial="hidden" animate="visible" className="space-y-6">
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Teams must consist of exactly 2 members</li>
-                                        <li>All team members must be enrolled in the same college</li>
-                                        <li>Each participant can be part of only one team</li>
+                                        <li>Open to all students irrespective of their branches and year.</li>
+                                        <li>Team should consist of 2 members.</li>
+                                        <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Debate Format</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Quiz Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Topics will be announced 24 hours before the event</li>
-                                        <li>Each team will be assigned a position (for or against)</li>
-                                        <li>7 minutes for opening statements</li>
-                                        <li>5 minutes for rebuttal</li>
-                                        <li>3 minutes for closing arguments</li>
-                                        <li>Q&amp;A session with judges (5 minutes)</li>
+                                        <li>This event consists of three rounds, after every round there will elimination of participants, only selected ones are allowed to participate in next further rounds.</li>
+                                        <li>First round consists of 30 MCQ's with 1 mark for each</li>
+                                        <li>Similarly the second route comprises 15 questions on logo identification</li>
+                                        <li>In the final round comprises to identify the famous personalities and their inventions</li>
+                                        <li>For each round the time allotted would be 30 minutes </li>
                                     </ul>
                                 </motion.div>
 
@@ -120,20 +121,21 @@ export default function DebateRulesPage() {
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Rules</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Prizes</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>No personal attacks or offensive language</li>
-                                        <li>Teams must stick to their assigned position</li>
-                                        <li>No interrupting the opposing team</li>
-                                        <li>Citations and sources should be provided for facts</li>
-                                        <li>Judges' decision is final</li>
+                                        <li>Top 2 teams will get a medal with certificate</li>
+                                        <li>Participation certificates will be awarded to all participants.</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
                         </CardContent>
                     </Card>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                        <Button size="lg" className="w-full sm:w-auto">
+                        <Button
+                            size="lg"
+                            className="w-full sm:w-auto"
+                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                        >
                             Register Now
                         </Button>
                         <Button
@@ -147,7 +149,7 @@ export default function DebateRulesPage() {
                         </Button>
                     </div>
 
-                    <section className="py-16">
+                    {/* <section className="py-16">
                         <motion.h2
                             className="mb-6 text-center text-3xl font-bold"
                             initial={{ opacity: 0 }}
@@ -157,7 +159,7 @@ export default function DebateRulesPage() {
                             Gallery
                         </motion.h2>
                         <Carousel />
-                    </section>
+                    </section> */}
 
                     <section id="coordinators" className="py-16 scroll-mt-16">
                         <div className="mx-auto max-w-6xl px-4">
@@ -175,7 +177,7 @@ export default function DebateRulesPage() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {coordinators.map((coordinator, index) => (
+                                {technoquestCoordinators.map((coordinator, index) => (
                                     <motion.div
                                         key={index}
                                         variants={fadeIn}
@@ -194,11 +196,15 @@ export default function DebateRulesPage() {
                                             </div>
                                             <CardContent className="w-2/3 p-4 flex flex-col justify-center">
                                                 <h3 className="text-base font-bold mb-1">{coordinator.name}</h3>
-                                                <p className="text-primary text-sm mb-2">{coordinator.role}</p>
                                                 <div className="space-y-1 text-sm">
                                                     <div className="flex items-center gap-1">
                                                         <Phone className="h-3 w-3 text-muted-foreground" />
-                                                        <span className="text-xs">{coordinator.phone}</span>
+                                                        <a
+                                                            href={`tel:${coordinator.phone}`}
+                                                            className="hover:text-primary transition-colors text-xs"
+                                                        >
+                                                            {coordinator.phone}
+                                                        </a>
                                                     </div>
                                                     <div className="flex items-center gap-1">
                                                         <Linkedin className="h-3 w-3 text-muted-foreground" />
@@ -208,7 +214,7 @@ export default function DebateRulesPage() {
                                                             rel="noopener noreferrer"
                                                             className="hover:text-primary transition-colors text-xs"
                                                         >
-                                                            LinkedIn
+                                                            {coordinator.linkedin.split('/').filter(Boolean).pop()}
                                                         </a>
                                                     </div>
                                                 </div>

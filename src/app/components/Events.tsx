@@ -45,9 +45,9 @@ const Events = () => {
                             <motion.div key={event.id} variants={fadeIn} whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
                                 <Card className="flex h-full flex-col bg-card/50 backdrop-blur-sm overflow-hidden">
                                     <div className="w-full h-48 relative">
-                                        {event.videoUrl ? (
+                                        {(event as any).videoUrl ? (
                                             <video
-                                                src={event.videoUrl}
+                                                src={(event as any).videoUrl}
                                                 className="w-full h-full object-cover"
                                                 autoPlay
                                                 muted

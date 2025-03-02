@@ -2,55 +2,57 @@ const events = [
     {
         id: 1,
         title: "TechnoQuest",
-        description: "Design and present a poster on a technical topic",
+        description: "A battle of knowledge where participants tackle challenging questions across various technical domains",
         date: "March 21, 2025",
-        venue: "Auditorium",
-        teamSize: "Individual",
+        venue: "UBDTCE New Building",
+        teamSize: "Group of 2",
         image:"/placeholder.svg",
         slug: "technoquest"
     },
     {
         id: 2,
-        title: "Robo Race",
-        description: "Design and present a poster on a technical topic",
+        title: "Clash of Minds",
+        description: "A clas between the minds to argue, analyze, and defend technical concepts with logic and clarity.",
         date: "March 21, 2025",
-        venue: "Auditorium",
-        teamSize: "Individual",
-        videoUrl: "/robo.mp4",
-        slug:"roborace"
+        venue: "UBDTCE New Building",
+        teamSize: "Group of 2",
+        image: "/placeholder.svg",
+        slug:"clashofminds"
     },
     {
         id: 3,
-        title: "Line Follower Robot",
-        description: "Build and program a robot to follow a line",
-        date: "March 17, 2025",
-        venue: "Auditorium",
-        teamSize: "Individual",
-        image:"/placeholder.svg"
+        title: "Web Weave",
+        description: "A competition where participants create a dynamic website from scratch to showcase their skills to solve real-world problems.",
+        date: "March 21, 2025",
+        venue: "UBDTCE New Building",
+        teamSize: "Maximum 3",
+        image:"/placeholder.svg",
+        slug: "webweave"
     },
     {
         id: 4,
-        title: "Quiz",
-        description: "Test your knowledge in a spirited quiz competition",
-        date: "March 17, 2025",
-        venue: "Auditorium",
-        teamSize: "Individual",
-        image:"/placeholder.svg"
+        title: "Startup Simulation",
+        description: "A strategic event where participants pitch and simulate business models for innovative tech startups.",
+        date: "March 21, 2025",
+        venue: "UBDTCE New Building",
+        teamSize: "Group of 2 or 4",
+        image:"/placeholder.svg",
+        slug: "startupsimulation"
     },
     {
         id: 5,
-        title: "Debate",
-        description: "Engage in a thought-provoking debate on tech topics",
-        date: "March 17, 2025",
-        venue: "Auditorium",
+        title: "Paper Presentation",
+        description: "A stage to showcase research and ideas through well-structured technical papers and presentations.",
+        date: "March 21, 2025",
+        venue: "UBDTCE New Building",
         teamSize: "Individual",
         image:"/placeholder.svg"
     },
     {
         id: 6,
-        title: "Web Development",
-        description: "Demonstrate your expertise in creating a dynamic website",
-        date: "March 17, 2025",
+        title: "Robo Race",
+        description: "A high-speed competition where autonomous or manually controlled robots navigate challenging tracks",
+        date: "March 21, 2025",
         venue: "Auditorium",
         teamSize: "Individual",
         image:"/placeholder.svg"
@@ -91,13 +93,11 @@ const timeline = [
     },
 ]
 
-const coordinators = [
+const technoquestCoordinators = [
     {
-        name: "John Doe",
-        role: "Technical Head",
-        phone: "+1 (555) 234-5678",
-        email: "john.doe@techfest.com",
-        linkedin: "https://linkedin.com/in/johndoe",
+        name: "Sindhu KR",
+        phone: "+918746884530",
+        linkedin: "https://www.linkedin.com/in/sindhu-kr-3aabb2341",
         image: "/placeholder.svg?height=400&width=400",
     },
     {
@@ -115,31 +115,7 @@ const coordinators = [
         email: "alex.johnson@techfest.com",
         linkedin: "https://linkedin.com/in/alexjohnson",
         image: "/placeholder.svg?height=400&width=400",
-    },
-    {
-        name: "Sarah Williams",
-        role: "Robotics Lead",
-        phone: "+1 (555) 567-8901",
-        email: "sarah.williams@techfest.com",
-        linkedin: "https://linkedin.com/in/sarahwilliams",
-        image: "/placeholder.svg?height=400&width=400",
-    },
-    {
-        name: "Michael Brown",
-        role: "Coding Contest Lead",
-        phone: "+1 (555) 678-9012",
-        email: "michael.brown@techfest.com",
-        linkedin: "https://linkedin.com/in/michaelbrown",
-        image: "/placeholder.svg?height=400&width=400",
-    },
-    {
-        name: "Emily Davis",
-        role: "Marketing Head",
-        phone: "+1 (555) 789-0123",
-        email: "emily.davis@techfest.com",
-        linkedin: "https://linkedin.com/in/emilydavis",
-        image: "/placeholder.svg?height=400&width=400",
-    },
+    }
 ]
 
-export { events, timeline, coordinators }
+export { events, timeline, technoquestCoordinators }
