@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { clashofmindsCoordinators } from "../../DATA"
+import { clashofmindsCoordinators, startupsimulationCoordinators } from "../../DATA"
 import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
@@ -184,7 +184,7 @@ export default function StartUpSimulation() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {clashofmindsCoordinators.map((coordinator, index) => (
+                                {startupsimulationCoordinators.map((coordinator, index) => (
                                     <motion.div
                                         key={index}
                                         variants={fadeIn}

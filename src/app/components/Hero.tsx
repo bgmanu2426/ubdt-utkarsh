@@ -15,7 +15,7 @@ const Hero = () => {
     const [mounted, setMounted] = useState(false)
 
     function calculateTimeLeft() {
-        const difference = +new Date("2025-03-17") - +new Date()
+        const difference = +new Date("2025-03-18") - +new Date()
         if (difference > 0) {
             return {
                 days: Math.floor(difference / (1000 * 60 * 60 * 24)),

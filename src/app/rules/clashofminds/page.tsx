@@ -77,14 +77,14 @@ export default function ClashOfMinds() {
                             <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">TECHNO QUEST</h1>
+                    <h1 className="text-3xl font-bold">CLASH OF MINDS</h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Rules for technoquest (Quiz)</CardTitle>
+                            <CardTitle>Rules for Clash of Minds (Debate)</CardTitle>
                             <CardDescription>
-                                A battle of knowledge where participants tackle challenging questions across various technical domains
+                                A clash between the minds to argue, analyze, and defend technical concepts with logic and clarity.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -93,30 +93,28 @@ export default function ClashOfMinds() {
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
                                         <li>Open to all students irrespective of their branches and year.</li>
-                                        <li>Team should consist of 2 members.</li>
+                                        <li>Each team consists of 2 members, one supporting the motion (Affirmative) and the other opposing (Negative).</li>
                                         <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Quiz Format</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Debate Structure</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>This event consists of three rounds, after every round there will elimination of participants, only selected ones are allowed to participate in next further rounds.</li>
-                                        <li>First round consists of 30 MCQ's with 1 mark for each</li>
-                                        <li>Similarly the second route comprises 15 questions on logo identification</li>
-                                        <li>In the final round comprises to identify the famous personalities and their inventions</li>
-                                        <li>For each round the time allotted would be 30 minutes </li>
+                                        <li>A total of 10 minutes for each team will be provided</li>
+                                        <li>Opening Statements – Each speaker presents their argument (3 minutes).</li>
+                                        <li>Rebuttals – Teams challenge the opponent’s stance (3 minutes).</li>
+                                        <li>Cross-Questioning – Opposing teams ask direct questions (3 minutes).</li>
+                                        <li>Closing Remarks – Final summary and impact statement (1 minute).</li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Judging Criteria</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Content and argument quality (30%)</li>
-                                        <li>Technical accuracy (25%)</li>
-                                        <li>Presentation and delivery (20%)</li>
-                                        <li>Rebuttal effectiveness (15%)</li>
-                                        <li>Time management (10%)</li>
+                                        <li>Content (40%) – Strength of arguments and evidence.</li>
+                                        <li>Style (20%) – Clarity, confidence, and persuasion.</li>
+                                        <li>Strategy (40%) – How well the team structures arguments and responds to opponents.</li>
                                     </ul>
                                 </motion.div>
 
@@ -131,7 +129,7 @@ export default function ClashOfMinds() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li> 150/- per team (Group of 2)</li>
+                                        <li>150/- per team (Group of 2)</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>

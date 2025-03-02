@@ -12,7 +12,7 @@ const events = [
     {
         id: 2,
         title: "Clash of Minds",
-        description: "A clas between the minds to argue, analyze, and defend technical concepts with logic and clarity.",
+        description: "A clash between the minds to argue, analyze, and defend technical concepts with logic and clarity.",
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
@@ -175,20 +175,29 @@ const robovelocityCoordinators = [
     }
 ]
 
-const robovelocityCoordinators = [
+const paperpresentationCoordinators = [
     {
-        name: "Siddesh B",
-        phone: "+919663436808",
-        linkedin: "www.linkedin.com/in/bsiddesh"
+        name: "Spoorti Ekesh Holiyappanavar",
+        phone: "+919380229730",
+        linkedin: "https://www.linkedin.com/in/spoorti-ekesh-holiyappanavar-ba51262a3"
     },
     {
-        name: "Vinayak Kubakaddi",
-        phone: "+917756015274"
+        name: "Bhanuprakash MP",
+        phone: "+918867554428",
     },
     {
-        name: "Abhishek Singh",
-        phone: "+917080868898"
+        name: "Kavya V",
+        phone: "+918618700679",
     }
 ]
 
-export { events, timeline, technoquestCoordinators, clashofmindsCoordinators, webweaveCoordinators, startupsimulationCoordinators, robovelocityCoordinators }
+export {
+    events,
+    timeline,
+    technoquestCoordinators,
+    clashofmindsCoordinators,
+    webweaveCoordinators,
+    startupsimulationCoordinators,
+    robovelocityCoordinators,
+    paperpresentationCoordinators
+}
