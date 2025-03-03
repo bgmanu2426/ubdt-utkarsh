@@ -6,7 +6,7 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
-        image: "/placeholder.svg",
+        image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/techno%20Quest.webp",
         slug: "technoquest"
     },
     {
@@ -16,7 +16,7 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
-        image: "/placeholder.svg",
+        image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/debate.webp",
         slug: "clashofminds"
     },
     {
@@ -26,7 +26,7 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Maximum 3",
-        image: "/placeholder.svg",
+        image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/web-wave-image.webp",
         slug: "webweave"
     },
     {

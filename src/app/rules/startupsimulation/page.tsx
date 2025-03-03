@@ -131,7 +131,7 @@ export default function StartUpSimulation() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li> 200/- per team (Group of 2)</li>
+                                        <li>₹150/- per team (Group of 2)</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>

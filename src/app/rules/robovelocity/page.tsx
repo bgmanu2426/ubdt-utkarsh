@@ -132,7 +132,7 @@ export default function RoboVelocity() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li> 200/- per team</li>
+                                        <li>₹200/- per team</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
@@ -142,7 +142,7 @@ export default function RoboVelocity() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                            onClick={() => window.open("https://forms.gle/SK37qQJhVjYhSjFMA", "_blank")}
                         >
                             Register Now
                         </Button>

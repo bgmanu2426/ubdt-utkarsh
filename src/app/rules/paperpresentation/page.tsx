@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { clashofmindsCoordinators, paperpresentationCoordinators } from "../../DATA"
+import { paperpresentationCoordinators } from "../../DATA"
 import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
@@ -77,14 +77,14 @@ export default function PaperPresentation() {
                             <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">TECHNO QUEST</h1>
+                    <h1 className="text-3xl font-bold">PAPER PRESENTATION</h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Rules for technoquest (Quiz)</CardTitle>
+                            <CardTitle>Rules for Paper Presentation</CardTitle>
                             <CardDescription>
-                                A battle of knowledge where participants tackle challenging questions across various technical domains
+                                A stage to showcase research and ideas through well-structured technical papers and presentations.
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -92,8 +92,9 @@ export default function PaperPresentation() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
+                                        <li>The Technical Paper Presentation is a platform for students to showcase their research, analytical skills, and innovative ideas through the presentation of well-structured technical papers</li>
                                         <li>Open to all students irrespective of their branches and year.</li>
-                                        <li>Team should consist of 2 members.</li>
+                                        <li>Individual Participation</li>
                                         <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
                                     </ul>
                                 </motion.div>
@@ -131,7 +132,7 @@ export default function PaperPresentation() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li> 150/- per team (Group of 2)</li>
+                                        <li>₹150/- per team (Group of 2)</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>

@@ -131,7 +131,7 @@ export default function WebWeave() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li> 100/- per participant</li>
+                                        <li>₹100/- per participant</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
@@ -141,7 +141,7 @@ export default function WebWeave() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                            onClick={() => window.open("https://forms.gle/hkiCk83SApiFf2ho8", "_blank")}
                         >
                             Register Now
                         </Button>

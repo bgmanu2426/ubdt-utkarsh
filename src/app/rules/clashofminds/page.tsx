@@ -129,7 +129,7 @@ export default function ClashOfMinds() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>150/- per team (Group of 2)</li>
+                                        <li>₹150/- per team (Group of 2)</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
@@ -139,7 +139,7 @@ export default function ClashOfMinds() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                            onClick={() => window.open("https://forms.gle/1T427BHdcD6uE6cR8", "_blank")}
                         >
                             Register Now
                         </Button>
