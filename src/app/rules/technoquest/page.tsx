@@ -102,7 +102,7 @@ export default function TechnoQuest() {
                                     <h3 className="text-lg font-semibold mb-2">Quiz Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
                                         <li>This event consists of three rounds, after every round there will elimination of participants, only selected ones are allowed to participate in next further rounds.</li>
-                                        <li>First round consists of 30 MCQ's with 1 mark for each</li>
+                                        <li>First round consists of 25 MCQ's with 1 mark for each</li>
                                         <li>Similarly the second route comprises 15 questions on logo identification</li>
                                         <li>In the final round comprises to identify the famous personalities and their inventions</li>
                                         <li>For each round the time allotted would be 30 minutes </li>

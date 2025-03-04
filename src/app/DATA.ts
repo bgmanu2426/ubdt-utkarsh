@@ -13,7 +13,7 @@ const events = [
         id: 2,
         title: "Clash of Minds",
         description: "A clash between the minds to argue, analyze, and defend technical concepts with logic and clarity.",
-        date: "March 21, 2025",
+        date: "March 22, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/debate.webp",
@@ -33,10 +33,10 @@ const events = [
         id: 4,
         title: "Startup Simulation",
         description: "A strategic event where participants pitch and simulate business models for innovative tech startups.",
-        date: "March 21, 2025",
+        date: "March 22, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2 or 4",
-        image: "/placeholder.svg",
+        image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/startup%20simulation.webp",
         slug: "startupsimulation"
     },
     {
@@ -46,73 +46,73 @@ const events = [
         date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Individual",
-        image: "/placeholder.svg",
+        image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/paper%20presentation.webp",
         slug: "paperpresentation"
     },
     {
         id: 6,
         title: "Robo Velocity",
         description: "A high-speed competition where autonomous or manually controlled robots navigate challenging tracks",
-        date: "March 21, 2025",
+        date: "March 22, 2025",
         venue: "Mechanical Department",
         teamSize: "Maximum 4",
-        image: "/placeholder.svg",
+        image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/robo%20velocity.webp",
         slug: "robovelocity"
     },
 ]
 
 const timeline = [
     {
-        date: "March 20, 2025",
+        date: "March 21, 2025",
         time: "9:00 AM",
         title: "Registration Begins",
         description: "Registration desk opens for all participants"
     },
     {
-        date: "March 20, 2025",
+        date: "March 21, 2025",
         time: "9:30 AM",
         title: "Inauguration Ceremony",
         description: "Official opening of UTKARSH technical fest"
     },
     {
-        date: "March 20, 2025",
-        time: "10:30 AM",
+        date: "March 21, 2025",
+        time: "10:00 AM",
         title: "TechnoQuest",
         description: "Technical quiz competition begins"
     },
     {
-        date: "March 20, 2025",
-        time: "11:00 AM",
-        title: "Robo Velocity",
-        description: "Robo racing competition starts"
-    },
-    {
-        date: "March 20, 2025",
+        date: "March 21, 2025",
         time: "11:30 AM",
-        title: "Web Weave - Problem Statement",
-        description: "Web development challenge is shared with participants"
-    },
-    {
-        date: "March 20, 2025",
-        time: "1:00 PM",
-        title: "Startup Simulation - Ideation Phase",
-        description: "Teams begin brainstorming and outlining their startup concepts"
-    },
-    {
-        date: "March 20, 2025",
-        time: "1:00 PM",
-        title: "Paper Presentation",
-        description: "Technical paper presentations begins"
-    },
-    {
-        date: "March 20, 2025",
-        time: "2:30 PM",
         title: "Clash of Minds",
         description: "Debate and argumentation competition starts"
     },
     {
-        date: "March 20, 2025",
-        time: "4:30 PM",
+        date: "March 21, 2025",
+        time: "2:00 PM",
+        title: "Paper Presentation",
+        description: "Technical paper presentations begins"
+    },
+    {
+        date: "March 22, 2025",
+        time: "10:00 AM",
+        title: "Web Weave",
+        description: "Web development competition begins"
+    },
+    {
+        date: "March 22, 2025",
+        time: "11:00 AM",
+        title: "Startup Simulation - Ideation Phase",
+        description: "Teams begin brainstorming and outlining their startup concepts"
+    },
+    {
+        date: "March 22, 2025",
+        time: "1:00 PM",
+        title: "Robo Velocity",
+        description: "Robotics competition starts"
+    },
+    {
+        date: "March 22, 2025",
+        time: "4:00 PM",
         title: "Award Ceremony and Valedictory",
         description: "Winners of all events are announced and awarded"
     }
@@ -202,13 +202,13 @@ const robovelocityCoordinators = [
 
 const paperpresentationCoordinators = [
     {
-        name: "Akash DS",
-        phone: "+917019883153"
-    },
-    {
         name: "Spoorti Ekesh Holiyappanavar",
         phone: "+919380229730",
         linkedin: "https://www.linkedin.com/in/spoorti-ekesh-holiyappanavar-ba51262a3"
+    },
+    {
+        name: "Akash DS",
+        phone: "+917019883153"
     },
     {
         name: "Kavya V",

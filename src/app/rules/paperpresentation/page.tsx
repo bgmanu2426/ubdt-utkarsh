@@ -100,24 +100,29 @@ export default function PaperPresentation() {
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Quiz Format</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Event Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>This event consists of three rounds, after every round there will elimination of participants, only selected ones are allowed to participate in next further rounds.</li>
-                                        <li>First round consists of 30 MCQ's with 1 mark for each</li>
-                                        <li>Similarly the second route comprises 15 questions on logo identification</li>
-                                        <li>In the final round comprises to identify the famous personalities and their inventions</li>
-                                        <li>For each round the time allotted would be 30 minutes </li>
+                                        <li>Time limit: 5-8 (presentation) + 2 (Interaction session) minutes. </li>
+                                        <li>Slides: PowerPoint (5-9 slides). </li>
+                                        <li>Presentation should include:  </li>
+                                        <ul>i.	 Title Slide </ul>
+                                        <ul>ii.	 Introduction & Problem Statement</ul>
+                                        <ul>iii.	 Research/Analysis </ul>
+                                        <ul>iv.	 Findings & Results </ul>
+                                        <ul>v.	 Conclusion & Future Scope </ul>
+                                        <ul>vi.	 References </ul>
+
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Judging Criteria</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Content and argument quality (30%)</li>
-                                        <li>Technical accuracy (25%)</li>
-                                        <li>Presentation and delivery (20%)</li>
-                                        <li>Rebuttal effectiveness (15%)</li>
-                                        <li>Time management (10%)</li>
+                                        <li>Technical Content (40%): Originality, Methodology, Results</li>
+                                        <li>Presentation Skills (20%): Clarity, Organization, Delivery </li>
+                                        <li>Q&A Session (10%): Understanding, Responsiveness </li>
+                                        <li>Paper Quality (20%): Structure, Grammar, Citations </li>
+                                        <li>Overall adherence to the rules : 10% </li>
                                     </ul>
                                 </motion.div>
 
@@ -132,7 +137,7 @@ export default function PaperPresentation() {
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>₹150/- per team (Group of 2)</li>
+                                        <li>₹100/- per individual</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
@@ -142,7 +147,7 @@ export default function PaperPresentation() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                            onClick={() => window.open("https://forms.gle/2g17EXSyKd9pHhq38", "_blank")}
                         >
                             Register Now
                         </Button>
