@@ -141,7 +141,7 @@ export default function StartUpSimulation() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/your_google_forms_link", "_blank")}
+                            onClick={() => window.open("https://forms.gle/mzaUvzYNas2Xz9296", "_blank")}
                         >
                             Register Now
                         </Button>
