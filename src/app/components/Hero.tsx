@@ -1,5 +1,5 @@
 import { Button } from '@/src/components/ui/button'
-import { Download } from 'lucide-react'
+import { FaDownload } from "react-icons/fa6";
 import { motion, useScroll, useTransform } from "framer-motion"
 import React, { useEffect, useState } from 'react'
 
@@ -86,7 +86,7 @@ const Hero = () => {
                                 className="bg-white text-purple-900 hover:bg-gray-100 transition-transform hover:scale-105 group"
                                 onClick={() => window.open("/brochure.pdf", "_blank")}
                             >
-                                <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                                <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                                 Download Brochure
                             </Button>
                         </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 import { events } from '../DATA'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { CalendarDays, MapPin, Users } from 'lucide-react'
 import { Button } from "@/src/components/ui/button"
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaUsers, FaRegCalendarAlt } from "react-icons/fa";
+import { LuMapPin } from "react-icons/lu";
 
 const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -73,15 +73,15 @@ const Events = () => {
                                         <p className="mb-4 text-muted-foreground">{event.description}</p>
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-sm">
-                                                <CalendarDays className="h-4 w-4" />
+                                                <FaRegCalendarAlt  className="h-4 w-4" />
                                                 <span>{event.date}</span>
                                             </div>
                                             <div className="flex items-center gap-2 text-sm">
-                                                <MapPin className="h-4 w-4" />
+                                                <LuMapPin className="h-4 w-4" />
                                                 <span>{event.venue}</span>
                                             </div>
                                             <div className="flex items-center gap-2 text-sm">
-                                                <Users className="h-4 w-4" />
+                                                <FaUsers className="h-4 w-4" />
                                                 <span>{event.teamSize}</span>
                                             </div>
                                         </div>
