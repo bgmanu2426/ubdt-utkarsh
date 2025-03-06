@@ -104,7 +104,7 @@ export default function WebWeave() {
                                     <ul className="list-disc pl-5 space-y-1">
                                         <li>This event consists of a single round where a problem statement is given which has to be solved within 3 hours.</li>
                                         <li>Problem statement will be provided at the beginning of the event.</li>
-                                        <li>A total of 3+1 Hours is given to analyze, strategize, and implement their solution.</li>
+                                        <li>A total of 2+1 Hours is given to analyze, strategize, and implement their solution.</li>
                                         <li>After submission, each team will participate in a Q&A session on thier solution.</li>
                                         <li>Judges will evaluate the clarity, logic, and feasibility of their responses.</li>
                                     </ul>

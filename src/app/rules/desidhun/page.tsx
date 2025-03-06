@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { robovelocityCoordinators } from "../../DATA"
+import { desidhunCoordinators, paperpresentationCoordinators } from "../../DATA"
 import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
@@ -52,7 +52,7 @@ function Carousel() {
     )
 }
 
-export default function RoboVelocity() {
+export default function PaperPresentation() {
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
@@ -77,55 +77,59 @@ export default function RoboVelocity() {
                             <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">ROBO VELOCITY</h1>
+                    <h1 className="text-3xl font-bold">  DESI  DHUN  </h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Rules for Robo Velocity (Robo Race)</CardTitle>
+                            <CardTitle>Rules for desi dhun</CardTitle>
                             <CardDescription>
-                                A high-speed competition where autonomous or manually controlled robots navigate challenging tracks
-                            </CardDescription>
+                                A vibrant celebration of India's diverse cultural heritage through   traditional folk dance performances.                            </CardDescription>
                         </CardHeader>
                         <CardContent>
                             <motion.div variants={container} initial="hidden" animate="visible" className="space-y-6">
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Robo Race is an exciting competition where autonomous or manually controlled robots navigate a specially designed track filled with obstacles, ramps, and turns.</li>
-                                        <li>Open to all students irrespective of their branches and year.</li>
-                                        <li>Team should can have a maximum of 4 members.</li>
-                                        <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
+                                        <li>	Team Size: Only one team(upto 10 participants) per institutes.</li>
+                                        <li> Time Limit: 15 minutes(including  set up and clearance time).</li>
+                                        <li> A maximum of 4 accompanists are allowed.</li>
+                                        <li>The dance form can be either folk or tribal(Indian style) but not classical or western form.</li>
+
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Event Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>The track will feature turns, inclines, speed breakers, and obstacles to test control and speed.</li>
-                                        <li>Robots must stay within the track boundaries; going off-track may result in penalties.</li>
-                                        <li>Teams can restart in case of technical failure, but a time penalty will apply.</li>
-                                        <li>Preliminary Round: Teams compete to qualify for the finals based on speed and accuracy.</li>
-                                        <li>Final Round: The fastest robot with the least penalties wins.</li>
-                                        <li>In case of a tie, a re-race or an obstacle challenge will determine the winner.</li>
+                                        <li>Pre-recorded music in mp3 formate to be submitted in a pendrive at the reporting time to the event incharge.</li>
+                                        <li>Only Kannada songs are permitted.</li>
+
+                                        <li>Emphasis on authentic costumes and props relevant to the chosen folk dance form.</li>
+                                        <li>The participating team will be entirely responsible for removal of their sets,props etc…immediately after the completion  of  their performance.</li>
+
+
+
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Robot Specifications</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Judging Criteria</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Maximum Size: Up to 15 cm × 15 cm × 15 cm (L × W × H) (small variations are acceptable).</li>
-                                        <li>Weight Limit: Between 1.5 kg and 3 kg (including battery).</li>
-                                        <li>The robot must be powered only by batteries.</li>
-                                        <li>Voltage Limit: Maximum 12V allowed.</li>
+                                        <li> 	Authenticity of the dance form[30 marks]. </li>
+                                        <li>Technique and execution[30 marks].</li>
+                                        <li>Costumes and props[30 marks].</li>
+                                        <li>Rhythm and coordination[20 marks].</li>
+                                        <li>Overall presentation and stage presence. </li>
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Prizes</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Top 2 teams will get cash prize with certificate</li>
-                                        <li>Participation certificates will be awarded to all participants.</li>
+                                        <li>	First prize : Cash prize with certificate.</li>
+                                        <li> Second prize : Cash prize with certificate.</li>
+
                                     </ul>
                                 </motion.div>
 
@@ -142,7 +146,7 @@ export default function RoboVelocity() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/SK37qQJhVjYhSjFMA", "_blank")}
+                            onClick={() => window.open("https://forms.gle/FtAF5r8wwYHNhcKe7", "_blank")}
                         >
                             Register Now
                         </Button>
@@ -150,7 +154,7 @@ export default function RoboVelocity() {
                             variant="outline"
                             size="lg"
                             className="w-full sm:w-auto group"
-                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-rulebook/rulebook-robo.pdf", "_blank")}
+                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-rulebook/desi%20dhun.pdf", "_blank")}
                         >
                             <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                             Download Brochure
@@ -185,7 +189,7 @@ export default function RoboVelocity() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {robovelocityCoordinators.map((coordinator, index) => (
+                                {desidhunCoordinators.map((coordinator: { name: string; phone: string; linkedin?: string }, index) => (
                                     <motion.div
                                         key={index}
                                         variants={fadeIn}
@@ -208,7 +212,7 @@ export default function RoboVelocity() {
                                                             {coordinator.phone}
                                                         </a>
                                                     </div>
-                                                    {coordinator.linkedin && (
+                                                    {(coordinator as { name: string; phone: string; linkedin?: string }).linkedin && (
                                                         <div className="flex items-center gap-1 justify-center">
                                                             <FaLinkedin className="h-3 w-3 text-muted-foreground" />
                                                             <a

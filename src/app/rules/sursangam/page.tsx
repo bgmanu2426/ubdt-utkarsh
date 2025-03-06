@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { robovelocityCoordinators } from "../../DATA"
+import { sursangamCoordinators } from "../../DATA"
 import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
@@ -52,7 +52,7 @@ function Carousel() {
     )
 }
 
-export default function RoboVelocity() {
+export default function PaperPresentation() {
     const fadeIn = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
@@ -77,62 +77,91 @@ export default function RoboVelocity() {
                             <FaArrowLeft className="h-4 w-4" />
                         </Link>
                     </Button>
-                    <h1 className="text-3xl font-bold">ROBO VELOCITY</h1>
+                    <h1 className="text-3xl font-bold">Sursangam</h1>
                 </div>
                 <motion.div initial="hidden" animate="visible" variants={container} className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Rules for Robo Velocity (Robo Race)</CardTitle>
+                            <CardTitle>Rules for Sursangam</CardTitle>
                             <CardDescription>
-                                A high-speed competition where autonomous or manually controlled robots navigate challenging tracks
+                            A musical event celebrating the diverse and vibrant traditions of Indian group singing.   
                             </CardDescription>
-                        </CardHeader>
+              
+                               </CardHeader>
+
                         <CardContent>
                             <motion.div variants={container} initial="hidden" animate="visible" className="space-y-6">
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Team Composition</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Robo Race is an exciting competition where autonomous or manually controlled robots navigate a specially designed track filled with obstacles, ramps, and turns.</li>
-                                        <li>Open to all students irrespective of their branches and year.</li>
-                                        <li>Team should can have a maximum of 4 members.</li>
-                                        <li>Participants must maintain respectful behaviour; any violation of the rules will result in disqualification from the competition.</li>
-                                    </ul>
+                                    <li>	Students from any branch are allowed to participate.</li> 
+                                    <li>		Technical and non-technical students can participate.</li> 
+                                    <li>		Each participant can be part of only one team. </li>
+                                    <li>Each team can have a maximum of 3-6 participants. </li>
+
+                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Event Format</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>The track will feature turns, inclines, speed breakers, and obstacles to test control and speed.</li>
-                                        <li>Robots must stay within the track boundaries; going off-track may result in penalties.</li>
-                                        <li>Teams can restart in case of technical failure, but a time penalty will apply.</li>
-                                        <li>Preliminary Round: Teams compete to qualify for the finals based on speed and accuracy.</li>
-                                        <li>Final Round: The fastest robot with the least penalties wins.</li>
-                                        <li>In case of a tie, a re-race or an obstacle challenge will determine the winner.</li>
+                                    	<li>	Total Duration: Each team gets 15 minutes, including setup and performance.</li>
+                                        <li>	Setup Time: Teams must complete their setup within the first 2–3 minutes.</li>
+                                        <li>Performance Time: The actual singing performance should last 10–12 minutes.</li>
+                                        <li>	Wrap-up Time: Teams should conclude and clear the stage within the final 1–2 minutes.</li>
+                                        <li>	Time Limit Rule: Exceeding 15 minutes may result in penalties or disqualification.</li>
+                                                                                           
+
+
+		
+
+
+	
+	
+                                        <li>	Team must choose songs from the following forms: Classical, Semi-Classical, Folk, Patriotic, or Devotional.</li>
+                                        <li>	Film songs are strictly not allowed.</li>
+                                        <li>	There are no language restrictions – you can perform in any Indian regional language or Hindi.</li>
+	<li>Make sure your song selection follows these rules to ensure fair participation.</li>
+
+<li>	Team must use live instrumental accompaniment or perform a cappella.</li>
+<li>Electronic instruments are allowed but should not overpower vocals.</li>
+<li>	Pre-recorded tracks are strictly not allowed. Only live music is permitted during the performance.</li>
+
+
+
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
-                                    <h3 className="text-lg font-semibold mb-2">Robot Specifications</h3>
+                                    <h3 className="text-lg font-semibold mb-2">Judging Criteria</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Maximum Size: Up to 15 cm × 15 cm × 15 cm (L × W × H) (small variations are acceptable).</li>
-                                        <li>Weight Limit: Between 1.5 kg and 3 kg (including battery).</li>
-                                        <li>The robot must be powered only by batteries.</li>
-                                        <li>Voltage Limit: Maximum 12V allowed.</li>
+                                    	<li>Vocal Performance (30-40%)</li>
+
+
+<li>	Group Coordination (20-30%)</li>
+
+
+<li>	Song Selection & Interpretation (15-20%)</li>
+
+
+<li>Stage Presence & Presentation (10-15%)</li>
+
                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Prizes</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>Top 2 teams will get cash prize with certificate</li>
-                                        <li>Participation certificates will be awarded to all participants.</li>
-                                    </ul>
+                                    <li>	First prize : Cash prize with certificate.</li>
+                                    <li> Second prize : Cash prize with certificate.</li>
+
+                                     </ul>
                                 </motion.div>
 
                                 <motion.div variants={fadeIn}>
                                     <h3 className="text-lg font-semibold mb-2">Registration fee</h3>
                                     <ul className="list-disc pl-5 space-y-1">
-                                        <li>₹200/- per team</li>
+                                        <li>₹100/- per team</li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
@@ -142,7 +171,7 @@ export default function RoboVelocity() {
                         <Button
                             size="lg"
                             className="w-full sm:w-auto"
-                            onClick={() => window.open("https://forms.gle/SK37qQJhVjYhSjFMA", "_blank")}
+                            onClick={() => window.open( "https://forms.gle/twSS4TWsegS4KZuUA", "_blank")}
                         >
                             Register Now
                         </Button>
@@ -150,7 +179,7 @@ export default function RoboVelocity() {
                             variant="outline"
                             size="lg"
                             className="w-full sm:w-auto group"
-                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-rulebook/rulebook-robo.pdf", "_blank")}
+                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-rulebook/sursangama.pdf", "_blank")}
                         >
                             <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                             Download Brochure
@@ -185,7 +214,7 @@ export default function RoboVelocity() {
                                 initial="hidden"
                                 animate="visible"
                             >
-                                {robovelocityCoordinators.map((coordinator, index) => (
+                                {sursangamCoordinators.map((coordinator, index) => (
                                     <motion.div
                                         key={index}
                                         variants={fadeIn}
@@ -208,16 +237,16 @@ export default function RoboVelocity() {
                                                             {coordinator.phone}
                                                         </a>
                                                     </div>
-                                                    {coordinator.linkedin && (
+                                                    {(coordinator as { name: string; phone: string; linkedin?: string }).linkedin && (
                                                         <div className="flex items-center gap-1 justify-center">
                                                             <FaLinkedin className="h-3 w-3 text-muted-foreground" />
                                                             <a
-                                                                href={coordinator.linkedin}
+                                                                href={(coordinator as { name: string; phone: string; linkedin?: string }).linkedin}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 className="hover:text-primary transition-colors text-xs"
                                                             >
-                                                                {coordinator.linkedin
+                                                                {(coordinator as { name: string; phone: string; linkedin?: string }).linkedin
                                                                     ?.split("/")
                                                                     .filter(Boolean)
                                                                     .pop()}

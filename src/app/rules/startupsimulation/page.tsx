@@ -6,7 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card"
-import { clashofmindsCoordinators, startupsimulationCoordinators } from "../../DATA"
+import { startupsimulationCoordinators } from "../../DATA"
 import { FaDownload, FaLinkedin, FaPhoneAlt, FaArrowLeft } from "react-icons/fa";
 
 function Carousel() {
