@@ -2,6 +2,7 @@ import { IoIosCall } from "react-icons/io";
 import { LuMapPin } from "react-icons/lu";
 import Link from 'next/link'
 import React from 'react'
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -33,7 +34,7 @@ const Footer = () => {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold mb-4">Technical Secretaries</h3>
+                                <h3 className="text-2xl font-bold mb-4">Technical Secretaries</h3>
                                 <div className="space-y-4">
                                     <div className="flex flex-col space-y-1">
                                         <span className="font-medium">Nandini SR</span>
@@ -51,6 +52,17 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div>
+                                <h3 className="text-2xl font-bold mb-4">Social Media</h3>
+                                <div className="flex flex-col space-y-1">
+                                    <div className="flex items-center gap-2">
+                                        <FaInstagram className="h-5 w-5 text-primary" />
+                                        <Link href="https://instagram.com/ubdtutkarsh" target="_blank" rel="noopener noreferrer">
+                                            @ubdtutkarsh
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -58,7 +70,7 @@ const Footer = () => {
                         <p>&copy; {new Date().getFullYear()} UBDT Utkarsh. All rights reserved.</p>
                         <br />
                         <p>
-                            Developed by <Link href="https://github.com/bgmanu2426" target="_blank" rel="noopener noreferrer">bgmanu2426</Link>
+                            Developed by <Link href="https://lnbg.in" target="_blank" rel="noopener noreferrer">bgmanu2426</Link>
                         </p>
                     </div>
                 </div>

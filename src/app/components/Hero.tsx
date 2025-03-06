@@ -84,7 +84,7 @@ const Hero = () => {
                             <Button
                                 size="lg"
                                 className="bg-white text-purple-900 hover:bg-gray-100 transition-transform hover:scale-105 group"
-                                onClick={() => window.open("/brochure.pdf", "_blank")}
+                                onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/Utkarsh-2k25.pdf", "_blank")}
                             >
                                 <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                                 Download Brochure

@@ -3,7 +3,7 @@ const events = [
         id: 1,
         title: "TechnoQuest",
         description: "A battle of knowledge where participants tackle challenging questions across various technical domains",
-        date: "March 21, 2025",
+        date: "March 20, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/techno%20Quest.webp",
@@ -13,7 +13,7 @@ const events = [
         id: 2,
         title: "Clash of Minds",
         description: "A clash between the minds to argue, analyze, and defend technical concepts with logic and clarity.",
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/debate.webp",
@@ -23,7 +23,7 @@ const events = [
         id: 3,
         title: "Web Weave",
         description: "A competition where participants create a dynamic website from scratch to showcase their skills to solve real-world problems.",
-        date: "March 21, 2025",
+        date: "March 20, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Maximum 3",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/web-wave-image.webp",
@@ -33,7 +33,7 @@ const events = [
         id: 4,
         title: "Startup Simulation",
         description: "A strategic event where participants pitch and simulate business models for innovative tech startups.",
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Group of 2 or 4",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/startup%20simulation.webp",
@@ -43,7 +43,7 @@ const events = [
         id: 5,
         title: "Paper Presentation",
         description: "A stage to showcase research and ideas through well-structured technical papers and presentations.",
-        date: "March 21, 2025",
+        date: "March 20, 2025",
         venue: "UBDTCE New Building",
         teamSize: "Individual",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/paper%20presentation.webp",
@@ -53,7 +53,7 @@ const events = [
         id: 6,
         title: "Robo Velocity",
         description: "A high-speed competition where autonomous or manually controlled robots navigate challenging tracks",
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         venue: "Mechanical Department",
         teamSize: "Maximum 4",
         image: "https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-event-images/robo%20velocity.webp",
@@ -63,13 +63,13 @@ const events = [
 
 const timeline = [
     {
-        date: "March 21, 2025",
+        date: "March 20, 2025",
         time: "9:00 AM",
         title: "Registration Begins",
         description: "Registration desk opens for all participants"
     },
     {
-        date: "March 21, 2025",
+        date: "March 20, 2025",
         time: "9:30 AM",
         title: "Inauguration Ceremony",
         description: "Official opening of UTKARSH technical fest"
@@ -87,31 +87,31 @@ const timeline = [
         description: "Debate and argumentation competition starts"
     },
     {
-        date: "March 21, 2025",
+        date: "March 20, 2025",
         time: "2:00 PM",
         title: "Paper Presentation",
         description: "Technical paper presentations begins"
     },
     {
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         time: "10:00 AM",
         title: "Web Weave",
         description: "Web development competition begins"
     },
     {
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         time: "11:00 AM",
         title: "Startup Simulation - Ideation Phase",
         description: "Teams begin brainstorming and outlining their startup concepts"
     },
     {
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         time: "1:00 PM",
         title: "Robo Velocity",
         description: "Robotics competition starts"
     },
     {
-        date: "March 22, 2025",
+        date: "March 21, 2025",
         time: "4:00 PM",
         title: "Award Ceremony and Valedictory",
         description: "Winners of all events are announced and awarded"

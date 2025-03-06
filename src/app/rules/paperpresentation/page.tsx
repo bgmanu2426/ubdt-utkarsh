@@ -155,7 +155,7 @@ export default function PaperPresentation() {
                             variant="outline"
                             size="lg"
                             className="w-full sm:w-auto group"
-                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/Quiz-rulebook.pdf", "_blank")}
+                            onClick={() => window.open("https://pub-860021a8f6b84064bf1a11e6264b53ed.r2.dev/utkarsh-rulebook/rulebook-paper.pdf", "_blank")}
                         >
                             <FaDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
                             Download Brochure
