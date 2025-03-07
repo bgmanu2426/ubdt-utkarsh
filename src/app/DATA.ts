@@ -154,20 +154,20 @@ const timeline = [
     description: "Official opening of UTKARSH technical fest",
   },
   {
-    date: "March 21, 2025",
+    date: "March 20, 2025",
     time: "10:00 AM",
     title: "TechnoQuest",
     description: "Technical quiz competition begins",
   },
   {
-    date: "March 21, 2025",
-    time: "11:30 AM",
-    title: "Clash of Minds",
-    description: "Debate and argumentation competition starts",
+    date: "March 20, 2025",
+    time: "12:15 PM",
+    title: "Web Weave",
+    description: "Web development competition starts",
   },
   {
     date: "March 20, 2025",
-    time: "2:00 PM",
+    time: "3:15 PM",
     title: "Paper Presentation",
     description: "Technical paper presentations begins",
   },
@@ -211,8 +211,8 @@ const timeline = [
   {
     date: "March 21, 2025",
     time: "10:00 AM",
-    title: "Web Weave",
-    description: "Web development competition begins",
+    title: "Clash of Minds",
+    description: "Debate competition commences",
   },
   {
     date: "March 21, 2025",
