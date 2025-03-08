@@ -279,9 +279,9 @@ const webweaveCoordinators = [
     linkedin: "https://www.linkedin.com/in/ramya-r-k-362630331",
   },
   {
-    name: "Siddesh B",
-    phone: "+919663436808",
-    linkedin: "https://www.linkedin.com/in/bsiddesh/",
+    name: "Vinay J D",
+    phone: "+919741435484",
+    linkedin: "https://www.linkedin.com/in/vinay-jd-8735582a5",
   },
 ];
 
